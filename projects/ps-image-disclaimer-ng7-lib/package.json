@@ -1,0 +1,19 @@
+{
+  "name": "ps-image-disclaimer-ng7-lib",
+  "version": "1.2.0",
+  "description": "This is a simple example Angular Library published to npm.",
+  "keywords": [
+    "Angular",
+    "Library",
+    "JavaScript",
+    "Node.js"
+  ],
+  "license": "SEE LICENSE IN LICENSE",
+  "peerDependencies": {
+    "@angular/common": "^7.1.0",
+    "@angular/core": "^7.1.0"
+  },
+  "dependencies": {
+    "ramda": "^0.26.1"
+  }
+}

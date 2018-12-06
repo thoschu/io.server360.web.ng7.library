@@ -43,3 +43,6 @@ testem.log
 Thumbs.db
 
 .npmrc
+
+!projects/
+!package.json
