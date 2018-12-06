@@ -46,3 +46,4 @@ Thumbs.db
 
 !projects/
 !package.json
+!package-lock.json
