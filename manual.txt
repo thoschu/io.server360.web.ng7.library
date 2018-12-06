@@ -1,0 +1,37 @@
+ng new ps-ng7-lib-app
+#mv ps-ng7-lib-app ps-ng7-lib
+cd ps-ng7-lib
+#ng serve
+#http://localhost:4200/
+#stop server
+
+ng generate component foo
+
+ng generate library ps-ng7-lib --prefix=tls
+ng build ps-ng7-lib
+    import {PsNg7LibModule} from 'ps-ng7-lib'; // app.module.ts
+    <tls-ps-ng7-lib></tls-ps-ng7-lib>
+ng serve
+http://localhost:4200/
+stop server
+
+ng generate component rocket --project=ps-ng7-lib
+    declarations: [PsNg7LibComponent, FooComponent]
+    exports: [PsNg7LibComponent, FooComponent]
+    export * from './lib/foo/foo.component'; //
+    <tls-foo></tls-foo> // public_api.ts
+ng build ps-ng7-lib
+#ng build ps-ng7-lib --watch
+
+"scripts": {
+  ...
+  "build-lib": "ng build example-ng6-lib",
+  ...
+},
+---
+"scripts": {
+  ...
+  "pack-lib": "cd dist/example-ng6-lib && npm pack",
+  ...
+},
+---
