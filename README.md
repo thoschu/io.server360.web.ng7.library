@@ -4,6 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 - See: manual.txt
 
+- https://www.npmjs.com/package/ps-image-disclaimer-ng7-lib
+
 ## Development server
 
 Run `npm install` and `npm start`.
