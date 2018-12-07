@@ -72,3 +72,5 @@ Then, use it in your markup:
   </li>
 </ul>
 ```
+
+![tag example](http://i63.tinypic.com/2aenybn.jpg)

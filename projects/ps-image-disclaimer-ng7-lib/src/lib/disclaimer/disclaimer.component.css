@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro|Special+Elite');
+
+p#disclaimer {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+span.disclaimer {
+  font-family: 'Special Elite', cursive;
+}

@@ -5,7 +5,7 @@ cd ps-ng7-lib
 #http://localhost:4200/
 #stop server
 
-ng generate component foo
+ng generate component foo-bar-baz
 
 ng generate library ps-ng7-lib --prefix=tls
 ng build ps-ng7-lib
@@ -22,16 +22,3 @@ ng generate component rocket --project=ps-ng7-lib
     <tls-foo></tls-foo> // public_api.ts
 ng build ps-ng7-lib
 #ng build ps-ng7-lib --watch
-
-"scripts": {
-  ...
-  "build-lib": "ng build example-ng6-lib",
-  ...
-},
----
-"scripts": {
-  ...
-  "pack-lib": "cd dist/example-ng6-lib && npm pack",
-  ...
-},
----

@@ -1,6 +1,6 @@
 {
   "name": "io.server360.web.ng7.library",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Tutorial: Creating a Library with Angular CLI",
   "repository": {
     "type": "git",
@@ -31,16 +31,20 @@
     "copy-files": "concurrently \"npm run _copy-licenses\" \"npm run _copy-readmes\"",
     "build-libs": "concurrently \"ng build ps-image-disclaimer-ng7-lib\"",
     "build-libs:w": "concurrently \"ng build ps-image-disclaimer-ng7-lib --watch\"",
+    "unpublish-pack": "npm unpublish .",
+    "deprecate-pack:latest": "npm deprecate ps-image-disclaimer-ng7-lib 'new version'",
+    "deprecate-pack:version": "npm deprecate ps-image-disclaimer-ng7-lib@'< x.x.x' 'new version'",
     "del-packs": "concurrently \"cd dist/ps-image-disclaimer-ng7-lib && del '*.tgz' '!-latest.tgz'\"",
     "pack-libs": "concurrently \"cd dist/ps-image-disclaimer-ng7-lib && npm pack\"",
     "copy-npmrc": "concurrently \"copy .npmrc ./dist/ps-image-disclaimer-ng7-lib/\"",
     "publish-packs": "concurrently \"cd ./dist/ps-image-disclaimer-ng7-lib && cat .npmrc && npm publish .\"",
     "publish-packs:x": "cd ./dist/ps-image-disclaimer-ng7-lib && cat .npmrc && npm publish .",
-    "build-publish-libs": "npm run copy-files && npm run build-libs && npm run del-packs && npm run pack-libs && npm run copy-npmrc && npm run publish-packs",
-    "build-publish-libs:dev": "npm run build-libs && npm run del-packs && npm run pack-libs && npm run copy-npmrc && npm run publish-packs",
-    "build-all": "npm run build-libs && npm run build"
+    "build-publish-libs": "npm run copy-files && npm run build-libs && npm run del-packs && npm run pack-libs && npm run copy-npmrc && npm run deprecate-pack:latest && npm run publish-packs",
+    "build-publish-libs:dev": "npm run build-libs && npm run del-packs && npm run pack-libs && npm run copy-npmrc && npm run deprecate-pack:latest && npm run publish-packs",
+    "build-all": "npm run build-libs && npm run build",
+    "app-version": "node -e \"process.stdout.write(require('./package.json').version);\""
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "~7.1.0",
     "@angular/common": "~7.1.0",

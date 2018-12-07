@@ -6,6 +6,7 @@ import {add, divide, multiply} from 'ramda';
   selector: 'pls-tls-ps-image-disclaimer-ng7-lib',
   template: `
     <img [src]="address" [alt]="alt" [width]="width">
+    <pls-tls-disclaimer></pls-tls-disclaimer>
   `,
   styles: [
     `
