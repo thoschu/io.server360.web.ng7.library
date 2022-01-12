@@ -14,6 +14,6 @@
     "@angular/core": "^7.1.0"
   },
   "dependencies": {
-    "ramda": "^0.26.1"
+    "ramda": "^0.27.2"
   }
 }
